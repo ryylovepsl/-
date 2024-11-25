@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="pynvPSrMo6n0yocTP0BnK-K-Ufr_xiHhM6REx-Afslo" />
+    <title>冉岩岩的个人网站</title>
+    <!-- 引入字体图标和Google字体 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 添加背景动画效果 -->
+    <div class="background-animation">
+        <div class="lines"></div>
+    </div>
+
+    <!-- 添加视频背景 -->
+    <video class="background-video" autoplay muted loop playsinline>
+        <source src="images/background.mp4" type="video/mp4">
+    </video>
+
+    <!-- 主页内容 -->
+    <main class="main-content">
+        <header class="site-header">
+            <nav>
+                <a href="#home" class="active">首页</a>
+                <a href="#about">关于我</a>
+                <a href="#contact">联系方式</a>
+            </nav>
+        </header>
+
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="glitch-wrapper">
+                    <h1 class="glitch" data-text="你好，我是冉岩岩">你好，我是<span class="highlight">冉岩岩</span></h1>
+                </div>
+                <p class="typing-text">一名热爱编程的计算机科学与技术专业学生</p>
+                <div class="scroll-indicator">
+                    <span>向下滚动了解更多</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">关于我</h2>
+                <div class="about-content">
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <img src="images/profile.jpg" alt="冉岩岩的照片" class="profile-photo">
+                            <div class="social-links">
+                                <a href="https://github.com/ryylovepsl" target="_blank" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="mailto:2704314701@qq.com" class="social-link">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p class="intro">
+                            我是冉岩岩，一名充满热情的计算机科学与技术专业学生。热爱编程，专注于创建优雅且高效的web应用。
+                            善于学习新技术，并且乐于解决复杂的技术问题。
+                        </p>
+                        
+                        <div class="skills">
+                            <h3 class="section-subtitle">我的标签</h3>
+                            <div class="skill-tags">
+                                <span class="tag">信息技术</span>
+                                <span class="tag">热爱生活</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">热爱创新</span>
+                                <span class="tag">Web开发</span>
+                                <span class="tag">热爱拍照</span>
+                            </div>
+                        </div>
+
+                        <div class="honors">
+                            <h3 class="section-subtitle">荣誉奖项</h3>
+                            <div class="honor-items">
+                                <div class="honor-item" onclick="showCertificate('images/certificate.png')">
+                                    <div class="honor-icon">
+                                        <i class="fas fa-award"></i>
+                                    </div>
+                                    <div class="honor-details">
+                                        <h4>图灵计划AI算法城市联赛秋季赛 二等奖</h4>
+                                        <p class="honor-year">2022年</p>
+                                        <span class="view-certificate">点击查看证书 <i class="fas fa-external-link-alt"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="education">
+                            <h3 class="section-subtitle">教育背景</h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="year">2023</div>
+                                    <div class="description">
+                                        <h4>计算机科学与技术</h4>
+                                        <p>专注于Web开发和软件工程</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">联系方式</h2>
+                <div class="contact-content">
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>邮箱</h3>
+                            <a href="mailto:2704314701@qq.com">2704314701@qq.com</a>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fab fa-github"></i>
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/ryylovepsl" target="_blank">github.com/ryylovepsl</a>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fab fa-weixin"></i>
+                            <h3>微信</h3>
+                            <p>扫描二维码添加</p>
+                            <img src="images/wechat-qr.jpg" alt="微信二维码" class="qr-code">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 证书查看模态框 -->
+    <div id="certificateModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="certificateImage" src="" alt="证书">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
